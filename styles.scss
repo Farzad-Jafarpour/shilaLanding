@@ -248,7 +248,8 @@ $color-white: rgb(255, 255, 255);
         .menu_items {
           @include alignCenter;
           justify-content: space-around;
-
+          // flex-basis: auto;
+          flex-wrap: wrap;
           padding-right: 15px;
           padding-bottom: 15px;
 
@@ -256,9 +257,15 @@ $color-white: rgb(255, 255, 255);
             flex-direction: column;
           }
           .menu_card {
+            width: 33.3%;
+
             border: 1px solid rgb(228, 228, 228);
             .text_container {
+              h3 {
+                overflow: hidden;
+              }
               padding: 15px;
+
               .price_tag {
                 @include alignCenter;
                 justify-content: space-between;
@@ -272,31 +279,31 @@ $color-white: rgb(255, 255, 255);
 
             .img_container img {
               max-width: 100%;
-              // @media (max-width: 1670px) {
-              //   width: 300px;
-              // }
-              // @media (max-width: 1507px) {
-              //   width: 280px;
-              // }
-              // @media (max-width: 1380px) {
-              //   width: 260px;
-              // }
-              // @media (max-width: 1282px) {
-              //   width: 240px;
-              // }
-              // @media (max-width: 1198px) {
-              //   width: 220px;
-              // }
-              // @media (max-width: 1090px) {
-              //   width: 180px;
-              // }
+              @media (max-width: 1670px) {
+                width: 300px;
+              }
+              @media (max-width: 1507px) {
+                width: 280px;
+              }
+              @media (max-width: 1380px) {
+                width: 260px;
+              }
+              @media (max-width: 1282px) {
+                width: 240px;
+              }
+              @media (max-width: 1198px) {
+                width: 220px;
+              }
+              @media (max-width: 1090px) {
+                width: 180px;
+              }
 
-              // @media (max-width: 883px) {
-              //   width: 160px;
-              // }
-              // @media (max-width: 767px) {
-              //   width: 340px;
-              // }
+              @media (max-width: 883px) {
+                width: 160px;
+              }
+              @media (max-width: 767px) {
+                width: 340px;
+              }
 
               opacity: 1;
               transition: opacity 0.3s ease-in-out;
